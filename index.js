@@ -39,7 +39,7 @@ app.get('/api/movies', (req, res) => {
   });
 });
 
-app.get('/api/movies/:names', (req, res) => {
+app.get('/api/movies/names', (req, res) => {
   connection.query(`SELECT name from movie` , (err, results) => {
     if (err) {
       res.status(500).send('Erreur lors de la récupération du filme');
